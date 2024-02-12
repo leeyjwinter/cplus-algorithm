@@ -1,48 +1,70 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <queue>
 
 using namespace std;
-int N;
-int C1;
-int answer;
-vector<int> v;
 
-bool possib(int n) {
-	int routers = C1 - 2;
-	int cur = v[0];
-	int i;
-	for (i = 1; i < N - 1; i++) {
-		if (routers == 0)
-			break;
-		if (v[i] - cur >= n) {
-			routers--;
-			cur = v[i];
-		}
+const int MAX = 125 * 125 * 9;
+int N;
+int ARR[125 + 1][125 + 1];
+int DP[125 + 1][125 + 1];
+int dx[] = { 0, 0, -1, 1 };
+int dy[] = { -1, 1, 0, 0 };
+
+struct XY {
+	int x;
+	int y;
+	int dist;
+
+	bool operator<(const XY &xy) const{
+		return this->dist > xy.dist;
 	}
-	if (routers > 0 || v[N - 1] - v[i - 1] < n)
-		return false;
-	return true;
-}
+};
 
 int main() {
-	cin >> N >> C1;
-	v.resize(N);
-	for (int i = 0; i < N; i++) {
-		cin >> v[i];
-	}
-
-	sort(v.begin(), v.end());
-
-	int minVal = 1;
-	int maxVal = v[N - 1] - v[0];
-	while (minVal <= maxVal) {
-		int mid = (minVal + maxVal) / 2;
-		if (possib(mid)) {
-			answer = mid;
-			minVal = mid + 1;
-		} else {
-			maxVal = mid - 1;
+	int T = 1;
+	while (true) {
+		cin >> N;
+		if (N == 0)
+			return 0;
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				cin >> ARR[i][j];
+			}
 		}
+
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				DP[i][j] = MAX;
+			}
+		}
+		DP[0][0] = ARR[0][0];
+
+		priority_queue<XY> q;
+		q.push( { 0, 0, ARR[0][0] });
+
+		while (!q.empty()) {
+			XY cur = q.top();
+			q.pop();
+
+			for (int i = 0; i < 4; i++) {
+				int newx = dx[i] + cur.x;
+				int newy = dy[i] + cur.y;
+				if (newx < 0 || newx > N - 1 || newy < 0 || newy > N - 1)
+					continue;
+				if (DP[cur.x][cur.y] + ARR[newx][newy] < DP[newx][newy]) {
+					DP[newx][newy] = DP[cur.x][cur.y] + ARR[newx][newy];
+					q.push( { newx, newy, DP[newx][newy]});
+				}
+			}
+
+		}
+
+		cout << "Problem " << T << ": " << DP[N - 1][N - 1] << "\n";
+		T++;
 	}
-	cout << answer;
+
+	return 0;
 
 }
