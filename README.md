@@ -74,44 +74,44 @@ g++ -std=c++14 -Wall src/bruteforce/BOJ2309_일곱난쟁이.cpp -o test.out
 ## 📝 Solved Problems
 
 ### Backtracking
-- `BOJ10971` - 외판원 순회 2
-- `PROG_가장큰수` - 가장 큰 수
+- [BOJ10971 - 외판원 순회 2](https://www.acmicpc.net/problem/10971)
+- [PROG - 가장 큰 수](https://school.programmers.co.kr/learn/courses/30/lessons/42746)
 
 ### Binary Search
-- `공유기설치` - 공유기 설치
-- `PROG_징검다리건너기` - 징검다리 건너기
+- [BOJ2110 - 공유기 설치](https://www.acmicpc.net/problem/2110)
+- [PROG - 징검다리 건너기](https://school.programmers.co.kr/learn/courses/30/lessons/64062)
 
 ### Bruteforce
-- `BOJ2309_일곱난쟁이` - 일곱 난쟁이
+- [BOJ2309 - 일곱 난쟁이](https://www.acmicpc.net/problem/2309)
 
 ### DFS
-- `불` - 불
-- `PROG_여행경로` - 여행 경로
-- `트리의지름` - 트리의 지름
+- [BOJ4179 - 불](https://www.acmicpc.net/problem/4179)
+- [PROG - 여행경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164)
+- [BOJ1167 - 트리의 지름](https://www.acmicpc.net/problem/1167)
 
 ### Dijkstra
-- `PROG_배달` - 배달
+- [PROG - 배달](https://school.programmers.co.kr/learn/courses/30/lessons/12978)
 
 ### Heap
-- `PROG_더맵게` - 더 맵게
+- [PROG - 더 맵게](https://school.programmers.co.kr/learn/courses/30/lessons/42626)
 
 ### Kruskal
-- `PROG_섬연결하기` - 섬 연결하기
+- [PROG - 섬 연결하기](https://school.programmers.co.kr/learn/courses/30/lessons/42861)
 
 ### Linked List
-- `PROG_표편집` - 표 편집
+- [PROG - 표 편집](https://school.programmers.co.kr/learn/courses/30/lessons/81303)
 
 ### Simulation
-- `BOJ2979_트럭주차` - 트럭 주차
+- [BOJ2979 - 트럭 주차](https://www.acmicpc.net/problem/2979)
 
 ### Sort
-- `BOJ11651` - 좌표 정렬하기 2
-- `PROG_가장큰수` - 가장 큰 수
+- [BOJ11651 - 좌표 정렬하기 2](https://www.acmicpc.net/problem/11651)
+- [PROG - 가장 큰 수](https://school.programmers.co.kr/learn/courses/30/lessons/42746)
 
 ### Type Conversion
-- `BOJ10808_알파벳개수` - 알파벳 개수
-- `BOJ10988_펠린드롬인지확인하기` - 팰린드롬인지 확인하기
-- `BOJ1159_농구경기` - 농구 경기
+- [BOJ10808 - 알파벳 개수](https://www.acmicpc.net/problem/10808)
+- [BOJ10988 - 팰린드롬인지 확인하기](https://www.acmicpc.net/problem/10988)
+- [BOJ1159 - 농구 경기](https://www.acmicpc.net/problem/1159)
 
 ## 📖 Learning Resources
 
